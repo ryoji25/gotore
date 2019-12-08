@@ -1,4 +1,7 @@
 .toppage-main {
+  position: sticky;
+  background-color: #000;
+  top: 0;
   height: 100px;
   box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
   .contents {
@@ -9,11 +12,11 @@
       height: 40px;
       width: 100%;
       .contents-logo {
+        color: #ffffff;
         width: 400px;
         margin: 0 auto;
         text-align: center;
         font-size: 40px;
-        font-weight: bold;
       }
     }
     .contents-bottom {
@@ -21,6 +24,7 @@
       width: 1020px;
       margin-top: 8px;
       .contents-bottom-left {
+        color: #ffffff;
         display: flex;
         height: 44px;
         line-height: 32px;
@@ -28,22 +32,19 @@
         float: left;
         .contents-search-left {
           width: 113px;
-          font-weight: bold;
           .fa-location-arrow  {
             font-size: 19px;
-            // color: #cccccc;
           }
         }
         .contents-search-right {
           width: 113px;
-          font-weight: bold;
           .fa-road {
             font-size: 19px;
-            // color: #cccccc;
           }
         }
       }
       .contents-bottom-right {
+        color: #ffffff;
         display:flex;
         height: 44px;
         line-height: 32px;
@@ -51,18 +52,14 @@
         float: right;
         .contents-like {
           width: 113px;
-          font-weight: bold;
           .fa-heart {
             font-size: 19px;
-            // color: #cccccc;
           }
         }
         .contents-mypage {
           width: 113px;
-          font-weight: bold;
           .fa-user-circle {
             font-size: 19px;
-            // color: #cccccc;
           }
         }
       }
