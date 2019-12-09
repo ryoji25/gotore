@@ -6,6 +6,7 @@
 |name|string|null: false|
 |e-mail|string|null: false|
 |profile|text||
+|image|string||
 |living|string||
 ​|password|string|null: false|
 

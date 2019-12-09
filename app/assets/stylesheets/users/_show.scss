@@ -1,0 +1,63 @@
+.mypage-main {
+  margin: 30px 270px;
+  width: 870px;
+  overflow: hidden;
+  .contents-box {
+  float: left;
+  // max-width: 930px;
+  // 1106に変更each文でpostを表示したらa:nth-child(4n)でマージン右をなくす
+  display: flex;
+  flex-wrap: wrap;
+    .contents-post {
+      margin: 0 0 30px 30px;
+      width: 260px;
+      height: 340px;
+      background-color: #ffffff;
+      .contents-top {
+        height:60px;
+        display: flex;
+        margin: 5px 0;
+        .image {
+          margin-left: 5px;
+          height: 60px;
+          width:60px;
+          border-radius: 50%;
+        }
+        .top-right {
+          margin-left: 10px;
+          .name-box {
+            font-size: 20px;
+            margin-top: 5px;
+            font-weight: bold;
+          }
+          .postdate-box {
+            font-size: 14px;
+            margin-top: 10px;
+            font-weight: 700;
+            color: #c0c0c0;
+          }
+        }
+      }
+      .contents-bottom {
+        margin: 10px;
+        .place-box {
+          margin-bottom: 10px;
+          font-weight: bold;
+        }
+        .date-box {
+          font-family: octin-college, sans-serif;
+          margin-bottom: 30px;
+          font-weight: bold;
+        }
+        .title-box {
+          margin-bottom: 10px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        .text-box {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
