@@ -3,12 +3,12 @@
     background-color: #ffffff;
     width: 700px;
     margin: 30px auto;
+    padding-top: 15px;
     .contents-top {
       height:60px;
       display: flex;
-      margin: 5px 0;
       .image {
-        margin-left: 5px;
+        margin-left: 15px;
         height: 60px;
         width:60px;
         border-radius: 50%;
@@ -29,23 +29,70 @@
       }
     }
     .contents-bottom {
-      margin: 10px;
-      .place-box {
-        margin-bottom: 10px;
-        font-weight: bold;
+      margin: 10px 0;
+      .main-box {
+        border-bottom: 1px solid white;
+        width : 100%;
+        padding: 40px;
       }
-      .date-box {
-        font-family: octin-college, sans-serif;
-        margin-bottom: 30px;
-        font-weight: bold;
+      .main-place {
+        width: 620px;
+        height: 70px;
       }
-      .title-box {
-        margin-bottom: 10px;
-        font-size: 20px;
-        font-weight: bold;
+      .input-place {
+        height: 48px;
+        width: 620px;
+        font-size:16px;
+        margin: 8px 0 0 0;
+        padding: 10px 16px 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
       }
-      .text-box {
-        font-weight: 500;
+      .main-date {
+        width: 620px;
+        height: 70px;
+        margin: 40px 0 0;
+      }
+      .input-date {
+        height: 48px;
+        width: 620px;
+        font-size:16px;
+        margin: 8px 0 0 0;
+        padding: 10px 16px 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .main-title {
+        width: 620px;
+        height: 70px;
+        margin: 40px 0 0;
+      }
+      label {
+        font-weight: 600;
+      }
+      .input-title {
+        height: 48px;
+        width: 620px;
+        font-size:16px;
+        margin: 8px 0 0 0;
+        padding: 10px 16px 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .main-text {
+        height: 164px;
+        width: 620px;
+        margin: 40px 0 0 ;
+      }
+      .textarea{
+        height: 142px;
+        width: 620px;
+        margin: 8px 0 0 0 ;
+        padding:10px;
+        font-size:16px;
+        line-height: 1.5;
+        border: 1px solid #ccc;
+        min-height: 104px;
       }
     }
   }
