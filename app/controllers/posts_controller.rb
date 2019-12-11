@@ -1,14 +1,14 @@
 class PostsController < ApplicationController
 
   def index
-    @post = Post.limit(12).order("created_at DESC")
+    @posts = Post.limit(12).order("created_at DESC").includes(:user)
   end
 
   def show
   end
   
   def new
-    @posts = Post.new
+    @post = Post.new
   end
 
   def create
@@ -17,6 +17,9 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
   
+  def edit
+  end
+
   private
   def post_params
       params.require(:post).permit(:title, :text, :date, :place).merge(user_id: current_user.id)

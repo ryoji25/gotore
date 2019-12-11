@@ -4,8 +4,6 @@
   overflow: hidden;
   .contents-box {
   float: left;
-  // max-width: 930px;
-  // 1106に変更each文でpostを表示したらa:nth-child(4n)でマージン右をなくす
   display: flex;
   flex-wrap: wrap;
     .contents-post {
