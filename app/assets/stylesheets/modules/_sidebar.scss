@@ -6,19 +6,17 @@
     list-style: none;
     li {
       border-top: 1px solid #eee;
-      .side-list {
-        text-align: center;
-        padding: 10px 16px;
-        display: block;
-        color: #333;
-        line-height: 2;
-        background: #fff;
-        transition: all 0.1s ease 0s;
+      text-align: center;
+      padding: 10px 16px;
+      display: block;
+      color: #333;
+      line-height: 2;
+      background: #fff;
+      transition: all 0.1s ease 0s;
       }
-      .side-list:hover {
-        // opacity: 0.6;
-        background: #f5f5f5;
-      }
+    .side-list:hover {
+      // opacity: 0.6;
+      background: #f5f5f5;
     }
   }
 }

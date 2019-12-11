@@ -1,6 +1,5 @@
 .contents-main {
-  max-width: 1128px;
-  // 1106に変更each文でpostを表示したらa:nth-child(4n)でマージン右をなくす
+  max-width: 1106px;
   margin: 30px auto;
   display: flex;
   flex-wrap: wrap;
@@ -54,5 +53,8 @@
         font-weight: 500;
       }
     }
+  }
+  .contents-post:nth-child(4n) {
+    margin-right: 0;
   }
 }
