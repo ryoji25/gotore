@@ -11,14 +11,13 @@
     .contents-bottom
       = form_for(@post) do |f|
         .main-box
-
           .main-place
             = f.label :place, "開催場所"
-            = f.text_field :date,{class: 'input-place', placeholder: "場所 例)エニタイム 難波"}
+            = f.text_field :place,{class: 'input-place', placeholder: "例)エニタイム 難波"}
 
           .main-date
             = f.label :date, "開催日時"
-            = f.text_field :date,{class: 'input-date', placeholder: "日時 例)2020年1月18日14時"}
+            = f.text_field :date,{class: 'input-date', placeholder: "例)2020年1月18日14時"}
 
           .main-title
             = f.label :title, "タイトル"
@@ -27,3 +26,20 @@
           .main-text
             = f.label :description, "合トレ内容"
             = f.text_area :text, {class: 'textarea', rouws:5 , placeholder:"詳細内容（必須1,000字まで）"}
+        .main-bottom
+          .text-notes
+            %p  
+              分かりやすく記入してください
+          -# = f.submit class: 'submitBtn'
+          %button{type: 'submit', class: 'submitBtn'}
+            投稿する
+          = link_to root_path do
+            %button{type: 'button'}
+              もどる
+
+
+
+
+
+
+
