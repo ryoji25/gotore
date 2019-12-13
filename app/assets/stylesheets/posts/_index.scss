@@ -4,6 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   .contents-post {
+    padding-top: 5px;
     margin: 0 22px 20px 0;
     width: 260px;
     height: 340px;
@@ -11,7 +12,6 @@
     .contents-top {
       height:60px;
       display: flex;
-      margin: 5px 0;
       .image {
         margin-left: 5px;
         height: 60px;
@@ -56,5 +56,8 @@
   }
   .contents-post:nth-child(4n) {
     margin-right: 0;
+  }
+  a {
+    color:#333333;
   }
 }

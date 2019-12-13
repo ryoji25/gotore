@@ -3,24 +3,25 @@
   .contents-box
     - if @posts.present?
       - @posts.each do |post|
-        .contents-post
-          .contents-top
-            = image_tag 'my-page.jpg', class: "image"
-            .top-right
-              .name-box
-                = "@#{post.user.name}"
-              .postdate-box
-                = post.created_at.strftime('%Y/%m/%d %H:%M')
-          .contents-bottom
-            .place-box
-              %i.fas.fa-map-marker-alt
-              = post.place
-            .date-box
-              %i.far.fa-calendar-alt
-              = post.date
-            .title-box
-              = post.title
-            .text-box
-              = post.text
+        = link_to post_path(post.id) do
+          .contents-post
+            .contents-top
+              = image_tag 'my-page.jpg', class: "image"
+              .top-right
+                .name-box
+                  = "@#{post.user.name}"
+                .postdate-box
+                  = post.created_at.strftime('%Y/%m/%d %H:%M')
+            .contents-bottom
+              .place-box
+                %i.fas.fa-map-marker-alt
+                = post.place
+              .date-box
+                %i.far.fa-calendar-alt
+                = post.date
+              .title-box
+                = post.title
+              .text-box
+                = post.text
 
   = render :partial => "shared/sidebar"
