@@ -23,6 +23,7 @@
 |text|text|null: false, index: true|
 |date|string|null: false|
 |place|string|null: false|
+|likes_count|integer||
 |user_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
