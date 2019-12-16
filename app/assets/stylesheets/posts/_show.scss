@@ -29,7 +29,7 @@
       }
     }
     .contents-bottom {
-      margin: 10px;
+      margin: 10px 30px 30px 30px;
       .place-box {
         margin-bottom: 10px;
         font-weight: bold;
@@ -100,16 +100,16 @@
         }
       }
     }
-  .contents-form {
-    padding: 20px 20px 10px 20px;
-    .form-text {
-      width: 100%;
-      line-height: 1.5;
-      min-height: 104px;
-      outline: 0;
-      padding: 10px;
-      font-size: 16px;
-      }
+    .contents-form {
+      padding: 20px 20px 10px 20px;
+      .form-text {
+        width: 100%;
+        line-height: 1.5;
+        min-height: 104px;
+        outline: 0;
+        padding: 10px;
+        font-size: 16px;
+        }
       .send-btn {
         width: 100%;
         margin: 8px 0 0;
@@ -119,6 +119,33 @@
         border: 1px solid #aaa;
         color: #fff;
         outline: 0;
+      }
+    }
+    .current-user-contents {
+      padding: 10px 20px;
+      .edit-post {
+        line-height: 48px;
+        margin: 16px 0 16px 0;
+        text-align: center;
+        background: #00BFFF;
+        .edit-text {
+          color: #fff;
+        }
+      }
+      .text-center {
+        text-align: center;
+      }
+      .delete-post {
+        line-height: 48px;
+        margin: 16px 0 16px 0;
+        text-align: center;
+        background: #ea352d;
+        .delete-btn {
+          
+          .delete-text {
+            color: #fff;
+          }
+        }
       }
     }
   }

@@ -46,3 +46,13 @@
         %textarea.form-text{type: "text", name: "comment"}
         %button.send-btn{type: "submit"}
           %span コメントする
+
+    %section.current-user-contents
+      .edit-post
+        = link_to "#", class: "edit-btn"   do
+          %p.edit-text 投稿の編集
+      %p.text-center or
+      .delete-post
+        = link_to "#", class: "delete-btn", method: :delete, data: {confirm: '削除すると二度と復活できません。',cancel: 'やめる', commit: '削除'}, title: '確認' do
+          %p.delete-text 投稿を削除
+
