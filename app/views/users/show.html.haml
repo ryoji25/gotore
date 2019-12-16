@@ -1,4 +1,4 @@
-= render :partial => "shared/main-header"
+= render "shared/main-header"
 .mypage-main
   .contents-box
     - if @posts.present?
@@ -23,5 +23,12 @@
                 = post.title
               .text-box
                 = post.text
+            .action-box
+              .like-area
+                %i.far.fa-heart
+                1
+              .comment-area
+                %i.far.fa-comment-alt
+                3
 
   = render :partial => "shared/sidebar"

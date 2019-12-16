@@ -16,9 +16,10 @@
               %i.fas.fa-road
               目的で探す
           .contents-bottom-right
-            .contents-like
-              %i.far.fa-heart
-              いいね一覧
+            .contents-post
+              = link_to new_post_path do
+                %i.fas.fa-plus
+                投稿する
             .contents-mypage
               = link_to user_path(current_user.id) do
                 %i.fas.fa-user-circle

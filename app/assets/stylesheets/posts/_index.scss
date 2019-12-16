@@ -1,6 +1,6 @@
 .contents-main {
-  max-width: 1106px;
-  margin: 30px auto;
+  max-width: 1128px;
+  margin: 130px auto;
   display: flex;
   flex-wrap: wrap;
   .contents-post {
@@ -34,7 +34,7 @@
       }
     }
     .contents-bottom {
-      margin: 10px;
+      margin: 10px 10px 5px 10px;
       .place-box {
         margin-bottom: 10px;
         font-weight: bold;
@@ -51,6 +51,23 @@
       }
       .text-box {
         font-weight: 500;
+        height: 142px;
+        overflow: hidden;
+        word-break: break-all;
+      }
+    }
+    .action-box {
+      float: right;
+      display: flex;
+      .like-area {
+        font-size: 17px;
+        width: 40px;
+        color: #c0c0c0;
+      }
+      .comment-area {
+        font-size: 17px;
+        width: 40px;
+        color: #c0c0c0;
       }
     }
   }

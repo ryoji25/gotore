@@ -1,4 +1,4 @@
-= render :partial => "shared/main-header"
+= render "shared/main-header"
 .contents-show
   .fit-box
     .contents-top
@@ -19,6 +19,13 @@
         = @post.title
       .text-box
         = @post.text
+    .action-box
+      .like-area
+        %i.far.fa-heart
+        10
+      .comment-area
+        %i.far.fa-comment-alt
+        3
     .contents-comments
       %h4 ＜コメント一覧＞
       - if @comments.present?

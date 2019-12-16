@@ -1,4 +1,4 @@
-= render :partial => "shared/main-header"
+= render "shared/main-header"
 .contents-main
   - if @posts.present?
     - @posts.each do |post|
@@ -22,4 +22,10 @@
               = post.title
             .text-box
               = post.text
-      
+          .action-box
+            .like-area
+              %i.far.fa-heart
+              1
+            .comment-area
+              %i.far.fa-comment-alt
+              3
