@@ -1,5 +1,7 @@
 .toppage-main {
-  position: sticky;
+  z-index: 1;
+  width: 100%;
+  position: fixed;
   background-color: #000;
   top: 0;
   height: 100px;
@@ -12,11 +14,13 @@
       height: 40px;
       width: 100%;
       .contents-logo {
-        color: #ffffff;
         width: 400px;
         margin: 0 auto;
         text-align: center;
         font-size: 40px;
+        a {
+          color: #ffffff;
+        }
       }
     }
     .contents-bottom {
@@ -49,14 +53,20 @@
         line-height: 32px;
         text-align: center;
         float: right;
-        .contents-like {
+        .contents-post {
           width: 113px;
-          .fa-heart {
+          a {
+            color: #ffffff;
+          }a
+          .fa-plus {
             font-size: 19px;
           }
         }
         .contents-mypage {
           width: 113px;
+          a {
+            color: #ffffff;
+          }
           .fa-user-circle {
             font-size: 19px;
           }

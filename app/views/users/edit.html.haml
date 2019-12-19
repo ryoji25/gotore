@@ -1,0 +1,17 @@
+
+= render :partial => "shared/main-header"
+
+%section.content-section
+  .profile-content
+    %section.profile-container
+      %h2.content-head プロフィール設定
+      .image-top
+        = form_for(@user) do |f|
+          .profile-box
+            %figure.icon-box
+              = image_tag 'my-page.jpg', class: 'profile-img'
+            = f.text_field :name,{class: 'input-profile-name', placeholder: "ユーザーネーム"}
+          .profile-text-content
+            = f.text_area :profile, {class: 'input-profile-text', rouws:5 , placeholder:"例）こんにちは！ 筋トレを始めたばかりで初心者ですがよろしくお願いします^^  主に筋力アップと減量を目的としたウエイトトレーニングを中心におこなっています！ 近くで一緒に筋トレができる友達が欲しいので合トレしましょう！ コメントなどお気軽にどうぞ☆♪"}
+            %button{type: 'submit', class: 'btn-change-profile'}
+              変更する

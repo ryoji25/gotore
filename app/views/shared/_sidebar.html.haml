@@ -4,8 +4,8 @@
       =link_to "#", {class:"side_menu" } do
         マイページ
     %li
-      =link_to "#", {class:"side_menu" } do
-        投稿する
+      =link_to edit_user_path(current_user.id), {class:"side_menu" } do
+        プロフィール設定
     %li
       = link_to destroy_user_session_path , method: :delete do
         ログアウト

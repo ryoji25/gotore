@@ -14,7 +14,6 @@
 - has_many :posts, dependent: :destroy
 - has_many :comments, dependent: :destroy
 - has_many :likes, dependent: :destroy
-- has_many :liked_posts, through: :likes, source: :post
 
 ## postsテーブル
 |Column|Type|Options|
@@ -23,12 +22,12 @@
 |text|text|null: false, index: true|
 |date|string|null: false|
 |place|string|null: false|
+|likes_count|integer||
 |user_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - has_many :comments, dependent: :destroy
 - has_many :likes, dependent: :destroy
-- has_many :liked_users, through: :likes, source: :user
 
 ## commentsテーブル
 |Column|Type|Options|

@@ -1,5 +1,5 @@
 .mypage-main {
-  margin: 30px 270px;
+  margin: 130px 270px 0 270px;
   width: 870px;
   overflow: hidden;
   .contents-box {
@@ -7,6 +7,7 @@
   display: flex;
   flex-wrap: wrap;
     .contents-post {
+      padding-top: 5px;
       margin: 0 0 30px 30px;
       width: 260px;
       height: 340px;
@@ -14,7 +15,6 @@
       .contents-top {
         height:60px;
         display: flex;
-        margin: 5px 0;
         .image {
           margin-left: 5px;
           height: 60px;
@@ -37,7 +37,7 @@
         }
       }
       .contents-bottom {
-        margin: 10px;
+        margin: 10px 10px 5px 10px;
         .place-box {
           margin-bottom: 10px;
           font-weight: bold;
@@ -54,8 +54,28 @@
         }
         .text-box {
           font-weight: 500;
+          height: 142px;
+          overflow: hidden;
+          word-break: break-all;
+        }
+      }
+      .action-box {
+        float: right;
+        display: flex;
+        .like-area {
+          font-size: 17px;
+          width: 40px;
+          color: #c0c0c0;
+        }
+        .comment-area {
+          font-size: 17px;
+          width: 40px;
+          color: #c0c0c0;
         }
       }
     }
+  }
+  a {
+    color:#333333;
   }
 }

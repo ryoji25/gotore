@@ -2,16 +2,16 @@
   .fit-box {
     background-color: #ffffff;
     width: 700px;
-    margin: 30px auto;
+    margin: 130px auto;
+    padding-top: 15px;
     .contents-top {
       height:60px;
       display: flex;
       margin: 5px 0;
       .image {
-        margin-left: 5px;
         height: 60px;
-        width:60px;
         border-radius: 50%;
+        margin-left: 15px;
       }
       .top-right {
         margin-left: 10px;
@@ -29,7 +29,7 @@
       }
     }
     .contents-bottom {
-      margin: 10px;
+      margin: 10px 30px 30px 30px;
       .place-box {
         margin-bottom: 10px;
         font-weight: bold;
@@ -46,6 +46,106 @@
       }
       .text-box {
         font-weight: 500;
+        word-wrap: break-word;
+      }
+    }
+    .action-box {
+      display: flex;
+      float: right;
+      .like-area {
+      font-size: 17px;
+      color: #c0c0c0;
+      }
+      .comment-area {
+      font-size: 17px;
+      color: #c0c0c0;
+      margin: 0 30px 0 10px;
+      }
+    }
+    .contents-comments {
+      padding: 30px 30px 0 30px;
+      h4 {
+        line-height: 1.57;
+        letter-spacing: 0.15em;
+        font-size: 16px;
+        color: #666;
+        border-bottom: solid 1px #666;
+      }
+      .comment-box {
+        margin-top: 20px;
+        .comment-user {
+          display: flex;
+          margin: 5px;
+          .image {
+          height: 40px;
+          border-radius: 50%;
+          }
+          .user-right {
+            margin-left: 10px;
+            .user-name {
+              font-weight: bold;
+              margin-top: 5px;
+            }
+            .comment-date {
+              margin: 5px 0 0 5px;
+              color: #c0c0c0;
+              font-weight: bold;
+            }
+          }
+        }
+        .comment-text {
+          font-weight: bold;
+          margin-top: 10px;
+          word-wrap: break-word;
+        }
+      }
+    }
+    .contents-form {
+      padding: 20px 20px 10px 20px;
+      .form-text {
+        width: 100%;
+        line-height: 1.5;
+        min-height: 104px;
+        outline: 0;
+        padding: 10px;
+        font-size: 16px;
+        }
+      .send-btn {
+        width: 100%;
+        margin: 8px 0 0;
+        line-height: 48px;
+        font-size: 14px;
+        background: #aaa;
+        border: 1px solid #aaa;
+        color: #fff;
+        outline: 0;
+      }
+    }
+    .current-user-contents {
+      padding: 30px 20px 10px;
+      .edit-post {
+        line-height: 48px;
+        margin: 16px 0 16px 0;
+        text-align: center;
+        background: #00BFFF;
+        .edit-text {
+          color: #fff;
+        }
+      }
+      .text-center {
+        text-align: center;
+      }
+      .delete-post {
+        line-height: 48px;
+        margin: 16px 0 16px 0;
+        text-align: center;
+        background: #ea352d;
+        .delete-btn {
+          
+          .delete-text {
+            color: #fff;
+          }
+        }
       }
     }
   }
