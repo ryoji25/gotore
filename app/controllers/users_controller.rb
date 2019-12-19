@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     if user.id == current_user.id
       user.update(user_params)
-      redirect_to root_path
+      redirect_to user_path
     end
   end
   
@@ -23,3 +23,5 @@ class UsersController < ApplicationController
   end
 
 end
+
+
