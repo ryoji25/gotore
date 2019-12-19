@@ -1,0 +1,36 @@
+= render :partial => "shared/main-header"
+
+%section.content-section
+  .profile-content
+    %section.profile-container
+      %h2.content-head プロフィール設定
+      .image-top
+        .profile-box
+          = form_for(@user) do |f|
+            %figure.icon-box
+              = image_tag 'my-page.jpg', class: 'profile-img'
+            = f.text_field :name,{class: 'input-place', placeholder: "例)エニタイム 難波"}
+            .profile-text-content
+              = f.text_area :profile, {class: 'textarea', rouws:5 , placeholder:"詳細内容（必須1,000字まで）"}
+              %button{type: 'submit', class: 'submitBtn'}
+                変更する
+              = link_to root_path do
+                %button{type: 'button'}
+                  もどる
+
+
+
+-# %section.content-section
+-#   .profile-content
+-#     %section.profile-container
+-#       %h2.content-head プロフィール設定
+-#       .image-top
+-#         .profile-box
+-#           = form_for(@user) do |f|
+-#             %figure.icon-box
+-#               = image_tag 'my-page.jpg', class: 'profile-img'
+-#             %input.input-profile-name{value: "#{@user.name}", placeholder: "例)AYA☆セール中", type: "text"}
+-#         .profile-text-content
+-#           %textarea.input-profile-text{placeholder: "例）こんにちは！ 筋トレを始めたばかりで初心者ですがよろしくお願いします^^  主に筋力アップと減量を目的としたウエイトトレーニングを中心におこなっています！ 近くで一緒に筋トレができる友達が欲しいので合トレしましょう！ コメントなどお気軽にどうぞ☆♪"}
+-#             = @user.profile
+-#           %button.btn-change-profile{type: "submit"} 変更する
