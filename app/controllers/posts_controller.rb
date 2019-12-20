@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit]
+  skip_before_action :authenticate_user!, only: [:index, :show,]
 
   def index
     @posts = Post.limit(12).order("created_at DESC").includes(:user)
