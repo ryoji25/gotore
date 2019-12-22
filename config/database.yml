@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: gotore_production
-  username: gotore
-  password: <%= ENV['GOTORE_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
