@@ -45,6 +45,13 @@
             border: solid 1px #0099e8;
             outline: 0;
           }
+          .image-box {
+            margin-top: 10px;
+            font-weight: bold;
+            .image-area {
+              margin-top: 5px;
+            }
+          }
         }
       }
       .profile-text-content {

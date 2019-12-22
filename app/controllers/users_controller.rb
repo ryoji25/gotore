@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :check_user, only: [:edit]
+  before_action :check_user, only: [:edit, :show]
 
   def show
     @posts = Post.where(user_id: current_user.id)
