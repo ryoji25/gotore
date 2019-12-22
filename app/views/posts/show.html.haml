@@ -20,41 +20,44 @@
       .text-box
         = @post.text
     .action-box
-      .like-area
-        %i.far.fa-heart
-        10
-      .comment-area
-        %i.far.fa-comment-alt
-        3
-    .contents-comments
-      %h4 ＜コメント一覧＞
-      - if @comments.present?
-        - @comments.each do |comment|
-          .comment-box
-            .comment-user
-              = image_tag 'my-page.jpg', class: "image"
-              .user-right
-                .user-name
-                  = "@#{comment.post.user.name}"
-                .comment-date
-                  = comment.post.created_at.strftime('%Y/%m/%d %H:%M')
-            .comment-text
-              = comment.comment
+      .adjust-right
+        .like-area
+          %i.far.fa-heart
+          10
+        .comment-area
+          %i.far.fa-comment-alt
+          3
 
-    .contents-form
-      = form_tag("/posts/#{@post.id}/comments", method: :post) do
-        %textarea.form-text{type: "text", name: "comment"}
-        %button.send-btn{type: "submit"}
-          %span コメントする
-    - if current_user.id == @post.user.id
-      %section.current-user-contents
-        .edit-post
-          = link_to edit_post_path, class: "edit-btn"   do
-            %p.edit-text 投稿の編集
-        %p.text-center or
-        .delete-post
-          = link_to "/posts/#{@post.id}", class: "delete-btn", method: :delete, data: {confirm: '削除すると二度と復活できません。',cancel: 'やめる', commit: '削除'}, title: '確認' do
-            %p.delete-text 投稿を削除
+    - if user_signed_in?
+      .space-box
+      .contents-comments
+        %h4 ＜コメント一覧＞
+        - if @comments.present?
+          - @comments.each do |comment|
+            .comment-box
+              .comment-user
+                = image_tag 'my-page.jpg', class: "image"
+                .user-right
+                  .user-name
+                    = "@#{comment.post.user.name}"
+                  .comment-date
+                    = comment.post.created_at.strftime('%Y/%m/%d %H:%M')
+              .comment-text
+                = comment.comment
+      .contents-form
+        = form_tag("/posts/#{@post.id}/comments", method: :post) do
+          %textarea.form-text{type: "text", name: "comment"}
+          %button.send-btn{type: "submit"}
+            %span コメントする
+      - if current_user.id == @post.user.id
+        %section.current-user-contents
+          .edit-post
+            = link_to edit_post_path, class: "edit-btn"   do
+              %p.edit-text 投稿の編集
+          %p.text-center or
+          .delete-post
+            = link_to "/posts/#{@post.id}", class: "delete-btn", method: :delete, data: {confirm: '削除すると二度と復活できません。',cancel: 'やめる', commit: '削除'}, title: '確認' do
+              %p.delete-text 投稿を削除
 
 
 

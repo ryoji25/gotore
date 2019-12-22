@@ -1,26 +1,55 @@
-%body
-  %header.toppage-main
-    .contents
-      .contents-top
-        .contents-logo
-          = link_to root_path do
-            %i.fas.fa-dumbbell
-            Gotore
-            %i.fas.fa-dumbbell
-        .contents-bottom
-          .contents-bottom-left
-            .contents-search-left
-              %i.fas.fa-location-arrow
-              地域で探す
-            .contents-search-right
-              %i.fas.fa-road
-              目的で探す
-          .contents-bottom-right
-            .contents-post
-              = link_to new_post_path do
-                %i.fas.fa-plus
-                投稿する
-            .contents-mypage
-              = link_to user_path(current_user.id) do
-                %i.fas.fa-user-circle
-                マイページ
+- if user_signed_in?
+  %body
+    %header.toppage-main
+      .contents
+        .contents-top
+          .contents-logo
+            = link_to root_path do
+              %i.fas.fa-dumbbell
+              Gotore
+              %i.fas.fa-dumbbell
+          .contents-bottom
+            .contents-bottom-left
+              .contents-search-left
+                %i.fas.fa-location-arrow
+                地域で探す
+              .contents-search-right
+                %i.fas.fa-road
+                目的で探す
+            .contents-bottom-right
+              .contents-post
+                = link_to new_post_path do
+                  %i.fas.fa-plus
+                  投稿する
+              .contents-mypage
+                = link_to user_path(current_user.id) do
+                  %i.fas.fa-user-circle
+                  マイページ
+
+-else
+  %body
+    %header.toppage-main
+      .contents
+        .contents-top
+          .contents-logo
+            = link_to root_path do
+              %i.fas.fa-dumbbell
+              Gotore
+              %i.fas.fa-dumbbell
+          .contents-bottom
+            .contents-bottom-left
+              .contents-search-left
+                %i.fas.fa-location-arrow
+                地域で探す
+              .contents-search-right
+                %i.fas.fa-road
+                目的で探す
+            .contents-bottom-right
+              .contents-post
+                = link_to new_user_registration_path do
+                  %i.fas.fa-user-plus
+                  新規会員登録
+              .contents-mypage
+                = link_to user_session_path do
+                  %i.fas.fa-sign-in-alt
+                  ログイン

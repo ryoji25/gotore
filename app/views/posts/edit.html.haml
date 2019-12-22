@@ -5,9 +5,9 @@
       = image_tag 'my-page.jpg', class: "image"
       .top-right
         .name-box
-          @gotore25
+          = @post.user.name
         .postdate-box
-          12月24日
+          = @post.created_at.strftime('%Y/%m/%d %H:%M')
     .contents-bottom
       = form_for(@post) do |f|
         .main-box
