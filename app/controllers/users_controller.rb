@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :check_user, only: [:edit]
 
   def show
     @posts = Post.where(user_id: current_user.id)
@@ -22,6 +23,12 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :profile)
   end
 
+  def check_user
+    user = User.find_by(id: params[:id])
+    if user.id != current_user.id
+      redirect_to root_path
+    end
+  end
 end
 
 
