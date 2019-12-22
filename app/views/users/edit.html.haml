@@ -9,7 +9,15 @@
         = form_for(@user) do |f|
           .profile-box
             %figure.icon-box
-              = image_tag 'my-page.jpg', class: 'profile-img'
+              = image_tag @user.image.url, class: 'profile-img'
+
+            = f.label :image do
+              .image-area__input
+                %pre
+                  ドラッグアンドドロップ
+                  またはクリックしてファイルをアップロード
+                = f.file_field :image, class: 'image-area__input--hidden fileField'
+
             = f.text_field :name,{class: 'input-profile-name', placeholder: "ユーザーネーム"}
           .profile-text-content
             = f.text_area :profile, {class: 'input-profile-text', rouws:5 , placeholder:"例）こんにちは！ 筋トレを始めたばかりで初心者ですがよろしくお願いします^^  主に筋力アップと減量を目的としたウエイトトレーニングを中心におこなっています！ 近くで一緒に筋トレができる友達が欲しいので合トレしましょう！ コメントなどお気軽にどうぞ☆♪"}
