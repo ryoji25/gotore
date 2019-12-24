@@ -2,12 +2,11 @@
 .contents-new
   .fit-box
     .contents-top
-      = image_tag 'my-page.jpg', class: "image"
+      = image_tag current_user.image.url, class: "image"
       .top-right
         .name-box
-          @gotore25
-        .postdate-box
-          12月24日
+          = current_user.name
+
     .contents-bottom
       = form_for(@post) do |f|
         .main-box
@@ -29,7 +28,7 @@
         .main-bottom
           .text-notes
             %p  
-              分かりやすく記入してください
+              合トレ内容を分かりやすく記入してください
           %button{type: 'submit', class: 'submitBtn'}
             投稿する
           = link_to root_path do
