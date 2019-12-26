@@ -1,0 +1,32 @@
+= render "shared/main-header"
+
+.contents-main
+  - if @searches.present?
+    - @searches.each do |searche|
+      = link_to post_path(searche.id) do
+        .contents-post
+          .contents-top
+            = image_tag searche.user.image.url, class: "image"
+            .top-right
+              .name-box
+                = "@#{searche.user.name}"
+              .postdate-box
+                = searche.created_at.strftime('%Y/%m/%d %H:%M')
+          .contents-bottom
+            .place-box
+              %i.fas.fa-map-marker-alt
+              = searche.place
+            .date-box
+              %i.far.fa-calendar-alt
+              = searche.date
+            .title-box
+              = searche.title
+            .text-box
+              = searche.text
+          .action-box
+            .like-area
+              %i.far.fa-heart
+              1
+            .comment-area
+              %i.far.fa-comment-alt
+              3

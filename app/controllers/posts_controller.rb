@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit]
-  skip_before_action :authenticate_user!, only: [:index, :show,]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @posts = Post.limit(12).order("created_at DESC").includes(:user)
@@ -35,6 +35,11 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy if @post.user_id == current_user.id
     redirect_to user_path(current_user.id)
+  end
+
+  def list
+    @search_word = params[:search]
+    @searches = Post.where('CONCAT(title, text, place, date) LIKE(?)', "%#{params[:search]}%").limit(50).where.not(user_id: current_user)if @search_word.present?
   end
 
   private
