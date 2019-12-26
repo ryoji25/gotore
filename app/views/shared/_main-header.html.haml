@@ -10,12 +10,11 @@
               %i.fas.fa-dumbbell
           .contents-bottom
             .contents-bottom-left
-              .contents-search-left
-                %i.fas.fa-location-arrow
-                地域で探す
-              .contents-search-right
-                %i.fas.fa-road
-                目的で探す
+              = form_tag (list_path) do
+                .search-form
+                  = text_field_tag "search", "", {class: "search-box", placeholder:"例) 梅田 脚トレ"}
+                  = button_tag type: 'submit' do
+                    = fa_icon 'search'
             .contents-bottom-right
               .contents-post
                 = link_to new_post_path do
@@ -38,12 +37,11 @@
               %i.fas.fa-dumbbell
           .contents-bottom
             .contents-bottom-left
-              .contents-search-left
-                %i.fas.fa-location-arrow
-                地域で探す
-              .contents-search-right
-                %i.fas.fa-road
-                目的で探す
+              = form_tag (list_path) do
+                .search-form
+                  = text_field_tag "search", "", {class: "search-box", placeholder:"例) 梅田 脚トレ"}
+                  = button_tag type: 'submit' do
+                    = fa_icon 'search'
             .contents-bottom-right
               .contents-post
                 = link_to new_user_registration_path do
