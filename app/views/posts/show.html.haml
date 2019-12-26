@@ -26,7 +26,7 @@
           1
         .comment-area
           %i.far.fa-comment-alt
-          3
+          = @post.comments.length
 
     - if user_signed_in?
       .space-box
@@ -36,7 +36,7 @@
           - @comments.each do |comment|
             .comment-box
               .comment-user
-                = image_tag 'my-page.jpg', class: "image"
+                = image_tag comment.user.image.url, class: "image"
                 .user-right
                   .user-name
                     = "@#{comment.post.user.name}"
