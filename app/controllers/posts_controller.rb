@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit]
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show, :list]
 
   def index
     @posts = Post.limit(12).order("created_at DESC").includes(:user)
@@ -39,7 +39,7 @@ class PostsController < ApplicationController
 
   def list
     @search_word = params[:search]
-    @searches = Post.where('CONCAT(title, text, place, date) LIKE(?)', "%#{params[:search]}%").limit(50).where.not(user_id: current_user)if @search_word.present?
+    @searches = Post.where('CONCAT(title, text, place, date) LIKE(?)', "%#{params[:search]}%")if @search_word.present?
   end
 
   private

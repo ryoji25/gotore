@@ -1,8 +1,10 @@
 = render "shared/main-header"
 
-.contents-main
-  - if @searches.present?
-    - @searches.each do |searche|
+- if @searches.present?
+  - @searches.each do |searche|
+    .search-results
+      = "#{@search_word}  の検索結果"
+    .search-contents-main
       = link_to post_path(searche.id) do
         .contents-post
           .contents-top
@@ -30,3 +32,8 @@
             .comment-area
               %i.far.fa-comment-alt
               3
+
+
+- else
+  .search-results
+    該当する投稿が見つかりません。検索条件を変えて、再度お試しください。
