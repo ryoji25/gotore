@@ -1,5 +1,18 @@
 = render "shared/main-header"
 .mypage-main
+  .user-profile
+    .profile-user-top
+      .profile-image
+        = image_tag current_user.image.url, class: "image"
+      .profile-name
+        = current_user.name
+      .profile-post-count
+    .profile-user-middle
+      .profile-user-text
+        = current_user.profile
+    .profile-user-bottom
+      .profile-post-count
+        166 投稿
   .contents-box
     - if @posts.present?
       - @posts.each do |post|

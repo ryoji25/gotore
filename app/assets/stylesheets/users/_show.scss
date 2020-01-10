@@ -2,6 +2,43 @@
   margin: 130px 270px 0 270px;
   width: 870px;
   overflow: hidden;
+  .user-profile {
+    float: left;
+    width: 870px;
+    height: 290px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    padding: 10px;
+    .profile-user-top {
+      display: flex;
+      .image {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+      }
+      .profile-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 15px;
+        vertical-align: bottom;
+        padding-top: 22px;
+      }
+    }
+    .profile-user-middle {
+      .profile-user-text {
+        padding: 10px;
+        height: 180px;
+      }
+    }
+    .profile-user-bottom {
+      .profile-post-count {
+        padding: 0px 10px 0 10px;
+        font-size: 18px;
+        width: 110px;
+        text-align: right;
+      }
+    }
+  }
   .contents-box {
   float: left;
   display: flex;
@@ -51,6 +88,7 @@
           margin-bottom: 10px;
           font-size: 20px;
           font-weight: bold;
+          overflow: hidden;
         }
         .text-box {
           font-weight: 500;
