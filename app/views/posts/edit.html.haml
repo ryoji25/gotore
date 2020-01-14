@@ -2,7 +2,7 @@
 .contents-new
   .fit-box
     .contents-top
-      = image_tag 'my-page.jpg', class: "image"
+      = image_tag current_user.image.url, class: "image"
       .top-right
         .name-box
           = @post.user.name
